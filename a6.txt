@@ -1,9 +1,0 @@
-6. 
-
-The retweeted graph is a social network of a twitter users. Each node is a 
-twitter user and the edge between them is the interaction. In this case, 
-the interaction is the retweet of the tweet. If a user retweets another 
-users tweets, then there will be an edge between them. 
-
-Similarly, the replied_to is a social network in which the edges are the 
-interaction of users who replied to one another in twitter.  
