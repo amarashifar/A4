@@ -1,3 +1,6 @@
+Question 0: 
+************************************************************************************
+
 Script started on 2022-10-17 20:59:00-04:00
 bash: /home/amirali/.bashrc: line 12: unexpected EOF while looking for matching `"'
 bash: /home/amirali/.bashrc: line 20: syntax error: unexpected end of file
@@ -20,7 +23,8 @@ Script done on 2022-10-17 20:59:23-04:00
 Script started on 2022-10-17 21:13:45-04:00
 bash: /home/amirali/.bashrc: line 12: unexpected EOF while looking for matching `"'
 bash: /home/amirali/.bashrc: line 20: syntax error: unexpected end of file
-bash-4.4$ cut -f 1,2 downloaded_tweets_extend_original_nolf2_NOBOT.tsv |grep '1497678663046905863\|1506392749330907142\|1496327528960737283\|1492304803824762881\|1491862877405429763\|1511282321789538313\|1505801685423300610\|1500983875207680006\|1500465032966062082\|15165113505696010243'
+bash-4.4$ cut -f 1,2 downloaded_tweets_extend_original_nolf2_NOBOT.tsv |grep '1497678663046905863\|1506392749330907142\|1496327528960737283\|1492304803824762881\|1491862877405429763\|1511282321789538313\|1505801685423300610\|1500983875207680006\|1500465032966062082\|151651
+13505696010243'
 1491862877405429763	18831926
 1492304803824762881	18053163
 1496327528960737283	15480566
@@ -37,9 +41,10 @@ The id's on the left  were found using the command on the previous step above. T
 The numbers on the right are users who made the most tweets and got the most retweets from the other user. We can see that there are the same users in this list. 
 However, the same user made different tweets and got retweeted the most. We cannot filter out the users who got retweets on different tweets because it would be 
 munipulating the data. The user 18831926 which has 3 tweets in the most retweeted tweet can be a celebrity with a lot of followers.  
+************************************************************************************
+*************************************************************************************************************************************************************************************************************************************************************************************************************
 
-
-
+1. 
 Script done on 2022-10-17 21:14:00-04:00
 Script started on 2022-10-19 14:34:32-04:00
 ]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ grep retweeted downloaded_tweets_extend_nolf2_NOBOT.tsv | cut -f 5 > retweet_id.tsv 
@@ -70,7 +75,8 @@ Script started on 2022-10-19 14:34:32-04:00
 
 Script done on 2022-10-19 14:35:11-04:00
 Script started on 2022-10-19 16:12:31-04:00
-]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ grep -w -Ff "retweet_id.tsv" "downloaded_tweets_extend_originaal_nolf2_NOBOT.tsv" | cut -f 2 > original_authors_of_the_tweets.tsv
+]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ grep -w -Ff "retweet_id.tsv" "downloaded_tweets_extend_origina
+al_nolf2_NOBOT.tsv" | cut -f 2 > original_authors_of_the_tweets.tsv
 ]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ exit
 
 Script done on 2022-10-19 16:13:41-04:00
@@ -116,10 +122,17 @@ Script started on 2022-10-19 16:37:10-04:00
 ]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ sort -k 1 combinedfile.tsv | sort -nr |awk ' { t = $1; $1 = $2; $2 = t; print; } ' > Q1_graph_[K.txt
 ]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ exit
 
+************************************************************************************
+*************************************************************************************************************************************************************************************************************************************************************************************************************
+2.
+
 Script done on 2022-10-19 16:37:29-04:00
 Script started on 2022-10-19 16:47:29-04:00
 ]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ awk '{print $1}' combinedfile.tsv | sort | uniq -c | sort -nr | awk '{ if ($1 >= 3) {print} }' > Q2.txt
 ]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ exit
+
+************************************************************************************
+*************************************************************************************************************************************************************************************************************************************************************************************************************
 
 Script done on 2022-10-19 16:47:59-04:00
 Terminal type is now 'unknown'
@@ -137,8 +150,14 @@ gnuplot> plot 'histogram4.dat' u (hist($1,width)):(1.0) smooth freq w boxes lc r
 gnuplot> plot 'histogram4.dat' using (bin($1,binwidth)):(1.0) smooth freq with boxes
 gnuplot> exit  
 
+************************************************************************************
+*************************************************************************************************************************************************************************************************************************************************************************************************************
+4. 
+
+
 Script started on 2022-10-19 19:22:10-04:00
-]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ grep -w -Ff "retweet_id.tsv" downloaded_tweets_extend_original_nolf2_NOBOT.tsv | cut -f 4 |tr "," "\n"  | tr [:upper:] [:lower:]| tr -d ' ' | tr -d '\"' |tr -d '"\'|  sorrt | uniq -c | sort -nr | head -n 30
+]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ grep -w -Ff "retweet_id.tsv" downloaded_tweets_extend_original_nolf2_NOBOT.tsv | cut -f 4 |tr "," "\n"  | tr [:upper:] [:lower:]| tr -d ' ' | tr -d '\"' |tr -d '"\'|  sor
+rt | uniq -c | sort -nr | head -n 30
 tr: warning: an unescaped backslash at end of string is not portable
    3168 ukraine
    1604 covid19
@@ -174,7 +193,8 @@ tr: warning: an unescaped backslash at end of string is not portable
 
 Script done on 2022-10-19 19:22:25-04:00
 Script started on 2022-10-19 19:25:02-04:00
-]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ dif[K[K[Kgrep -w -Ff "retweet_id.tsv" downloaded_tweets_extend_original_nolf2_NOBOT.tsv | cut -f 4 |tr "," "\n"  | tr [:upper:] [:lower:]| tr -d ' ' | tr -d '\"' |tr -d '"\'|  sorrt | uniq -c | sort -nr | head -n 30 < [K[K> retweetags.tsv
+]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ dif[K[K[Kgrep -w -Ff "retweet_id.tsv" downloaded_tweets_extend_original_nolf2_NOBOT.tsv | cut -f 4 |tr "," "\n"  | tr [:upper:] [:lower:]| tr -d ' ' | tr -d '\"' |tr -d '"\'|  sor
+rt | uniq -c | sort -nr | head -n 30 < [K[K> retweetags.tsv
 tr: warning: an unescaped backslash at end of string is not portable
 ]0;amirali@sjsu:/mnt/scratch/amirali/A4[amirali@sjsu A4]$ diff -u retweetags.tsv co[Kls[Kusterhashtags.tsv 
 --- retweetags.tsv	2022-10-19 19:26:02.200315802 -0400
