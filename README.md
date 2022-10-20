@@ -7,4 +7,4 @@ a4.txt --> commands of the four questions, including commands of the gnuplot
 
 gnu34.svg ---> histogram image created using gnnuplot
 
-histogram.dat ---> file used for creating the histogram.
+histogram4.dat ---> file used for creating the histogram.
