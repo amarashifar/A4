@@ -278,3 +278,29 @@ users tweets, then there will be an edge between them.
 
 Similarly, the replied_to is a social network in which the edges are the 
 interaction of users who replied to one another in twitter.  
+Script started on 2022-10-21 14:10:54-04:00
+]0;amirali@sjsu:/mnt/scratch/amirali/folder[amirali@sjsu folder]$ grep 997682274 downloaded_tweets_extend_original_nolf2_NOBOT.tsv | cut -f 2,4
+997682274	"January6th,Jan6thCommittee"
+997682274	"WearAMask,COVID19"
+997682274	"MoscowMitch,VotingRightsForThePeople"
+997682274	LGBTQ
+997682274	"UkraineCrisis,Treason"
+997682274	"TrumpRussia,RepublicansAreTraitors"
+997682274	Ukraine
+997682274	"VAWA,BoyfriendLoophole"
+997682274	"PsakiBomb,Ukraine"
+997682274	ThankYouDonWinslow
+]0;amirali@sjsu:/mnt/scratch/amirali/folder[amirali@sjsu folder]$ grep 15801906 downloaded_tweets_extend_original_nolf2_NOBOT.tsv | cut -f 2,4
+1352235653849870338	ScotusStench
+16966104	Spotify
+977796337151307776	SeizeChelsea
+2371064395	DemVoice1
+2876041031	SeizeTheYachts
+15801906	"BoycottCocaCola,BoycottPepsi"
+15801906	MarcoRubles
+1369880235064258571	Benghazi
+15801906	FBR
+518521500	"VoteMTGOut,LockHerUp"
+]0;amirali@sjsu:/mnt/scratch/amirali/folder[amirali@sjsu folder]$ exit
+
+Script done on 2022-10-21 14:11:08-04:00
